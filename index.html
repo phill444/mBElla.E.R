@@ -11,6 +11,9 @@
             margin: 0;
             padding: 20px;
             background-color: #13aff7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         /* Conteneur principal */
@@ -18,8 +21,9 @@
             position: relative;
             width: 100%;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            flex: 1;
         }
         
         /* L'image */
@@ -39,6 +43,8 @@
             background: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
             color: white;
             padding: 20px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
         }
         
         /* Titre */
@@ -53,48 +59,130 @@
             margin: 10px 0 0;
             font-size: 16px;
         }
-       header{
-        font-size: 50px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        margin-top:20px;
-        background-color: rgb(240, 209, 130);
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 30px;
+       
+        header {
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 20px;
+            background-color: rgb(240, 209, 130);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 30px;
+            text-align: center;
         } 
-        b{
-        margin-left: 550px;
+        
+        b {
+            display: block;
+            text-align: center;
         }
-        .Bouton{
-            width: 30px;
-            padding-left:20px ;
+        
+        .Bouton {
             display: flex;
-
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
         }
-        button{
-           margin-left: 10px; 
-           border-radius: 15px;
+        
+        button {
+            border-radius: 15px;
+            padding: 8px 15px;
         }
-        .Bouton a{
+        
+        .Bouton a {
             font-family: calibri;
             font-weight: 900;
             color: rgb(10, 10, 10);
             font-size: 16px;
-            display: inline-block;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgb(240, 209, 130);
+            padding: 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-top: 30px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        
+        .social-links a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #333;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                font-size: 30px;
+            }
+            
+            .texte-overlay h2 {
+                font-size: 22px;
+            }
+            
+            .texte-overlay p {
+                font-size: 14px;
+            }
+            
+            .Bouton {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            button {
+                width: 80%;
+                margin: 5px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                font-size: 24px;
+            }
+            
+            .texte-overlay {
+                padding: 10px;
+            }
+            
+            .texte-overlay h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div>
-            <b>PAGE D'ACCEUIL</b>
+            <b>PAGE D'ACCUEIL</b>
         </div>
         <div class="Bouton">
-        <button><a href="CV.html">Curriculum Vitae</a></button>
-        <button><a href="Mon Portfolio.html">Portfolio</a></button>
-        <button><a href="FORM.html">Formulaire</a></button>
+            <button><a href="CV.html">Curriculum Vitae</a></button>
+            <button><a href="Mon Portfolio.html">Portfolio</a></button>
+            <button><a href="FORM.html">Formulaire</a></button>
         </div>
     </header>
+    
     <div class="image-texte">
         <!-- Remplacez "votre-image.jpg" par le chemin de votre image -->
         <img src="bridges-5239525_1280.jpg" alt="Description de l'image">
@@ -105,5 +193,17 @@
         </div>
     </div>
     
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://x.com/">Twitter</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Tous droits réservés | Site créé par [Votre Nom]
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
